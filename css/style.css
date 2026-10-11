@@ -1,0 +1,40 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+/* ----------
+header
+---------- */
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 100px;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 9.51px;
+}
+.header__logo-img {
+    width: 25.49px;
+    height: 25px; 
+}
+.header__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #505050;
+    line-height: calc(33 / 18);
+}
+.header__nav-list {
+    display: flex;
+    gap: 10px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #505050
+}
+.header__nav-list a {
+    color: #505050;
+    line-height: 1;
+
+}
