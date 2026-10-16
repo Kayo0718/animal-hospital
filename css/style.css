@@ -4,6 +4,15 @@ body {
 /* ----------
 header
 ---------- */
+.br-sp {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .br-sp {
+        display: block;
+    }
+}
  header {
     display: flex;
     justify-content: space-between;
@@ -11,15 +20,25 @@ header
     height: 50px;
     padding: 0 100px;
 }
+/* ----------
+中間サイズ
+---------- */
+@media (min-width: 768px) and (max-width: 1079px) {
+    header {
+        padding: 0 20px;
+    }
+}
+/*----- ここまで　-----*/
 @media (max-width: 767px) {
     header {
-        padding: 13px 120px 12px 20px;
+        padding: 0 20px;
     }
 }
 .header__logo {
     display: flex;
     align-items: center;
     gap: 9.51px;
+    cursor: pointer;
 }
 .header__logo-img {
     width: 25.49px;
@@ -30,23 +49,31 @@ header
     font-weight: 700;
     color: #505050;
     line-height: calc(33 / 18);
+    transition: color 0.3s;
 }
 @media (max-width: 767px) {
     .header__title {
         font-size: 1.25rem;
     }
 }
-
+.header__logo:hover .header__title { 
+    color: #999999;
+}
 .header__nav-list {
     display: flex;
     gap: 10px;
     font-size: 0.875rem;
     font-weight: 700;
-    color: #505050
+    color: #505050;
 }
 .header__nav-list a {
     color: #505050;
     line-height: 1;
+    transition: color 0.3s;
+}
+.header__nav-list a:hover {
+    color: #999999;
+
 }
 @media (max-width: 767px) {
     .header__nav {
@@ -63,8 +90,9 @@ fv
 }
 @media (max-width: 767px) {
     .fv__img {
-        width: 375px;
-        height: 550px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }  
 .fv {
@@ -86,26 +114,26 @@ fv
 .fv__text {
     position: absolute;
     top: 152px;
-    left: 0;
-    /* right: 588px; */
-    /* bottom: 138px; */
     background-color: rgba(255, 255, 255, 0.702);
     width: 492px;
     height: 210px;
     padding-left: 99px;
     padding-top: 23px;
+    left: 0;
 }
 @media (max-width: 767px) {
     .fv__text {
         width: 311px;
         height: 148px;
         top: 402px;
-        right: 64px;
-        background-color: rgba(255, 255, 255, 0.702);
+        left: 0;
+        right: auto;
+        bottom: auto;
         padding-left: 20px;
         padding-top: 18px;
     }
 }
+
 .fv__lead {
     font-size: 1.5625rem;
     font-weight: 700;
@@ -114,5 +142,83 @@ fv
 @media (max-width: 767px) {
     .fv__lead {
         font-size: 1.25rem;
+    }
+}
+/* ----------
+ご挨拶
+---------- */
+.br-sp {
+    display: none;
+}
+@media (max-width: 767px) {
+    .br-sp {
+        display: inline;
+    }
+}
+.greeting {
+    padding-top: 55px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .greeting {
+        padding-top: 44px;
+    }
+}
+.greeting__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0D96A0;
+    line-height: calc(50 / 30);
+    text-align: center;
+    
+}
+@media (max-width: 767px) {
+    .greeting__title {
+        font-size: 1.5625rem; 
+        line-height: calc(35 / 25);
+        color: #0D96A0;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+.greeting__text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #505050;
+    line-height: calc(33 / 18);
+    padding: 0 100px;
+    margin-top: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 767px) {
+    .greeting__text {
+        padding: 0 20px;
+        margin-top: 17px;
+        text-align: left;
+        font-size: 1rem;
+        line-height: calc(30 / 16);
+    }
+}
+.ashiato {
+    position: absolute;
+    right: 76.24px;
+    bottom: -30px;
+}
+@media (max-width: 767px) {
+    .ashiato {
+        right: 29.55px;
+        bottom: 46.57px;
+    }
+}
+.ashiato img {
+    width: 83.75px;
+    height: 77.12px;
+}
+@media (max-width: 767px) {
+    .ashiato img {
+        width: 68.35px;
+        height: 62.94px;
     }
 }
