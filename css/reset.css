@@ -41,6 +41,7 @@ ol, ul, menu, summary {
 img {
   max-inline-size: 100%;
   max-block-size: 100%;
+  max-inline-size: none;
 }
 
 /* removes spacing between cells in tables */

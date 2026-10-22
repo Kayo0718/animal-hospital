@@ -1,6 +1,11 @@
 body {
     font-family: "Noto Sans JP", sans-serif;
 }
+@media (min-width: 768px) {
+    body {
+        width: 1080px;
+    }
+}
 /* ----------
 header
 ---------- */
@@ -84,6 +89,9 @@ header
 /* ----------
 fv
 ---------- */
+.fv {
+    position: relative;
+}          
 .fv__img {
     width: 1080px;
     height: 500px;
@@ -95,9 +103,6 @@ fv
         object-fit: cover;
     }
 }  
-.fv {
-    position: relative;
-} 
 .fv__title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -133,7 +138,6 @@ fv
         padding-top: 18px;
     }
 }
-
 .fv__lead {
     font-size: 1.5625rem;
     font-weight: 700;
@@ -158,6 +162,7 @@ fv
 .greeting {
     padding-top: 55px;
     position: relative;
+    padding-bottom: 82px;
 }
 @media (max-width: 767px) {
     .greeting {
@@ -170,10 +175,13 @@ fv
     color: #0D96A0;
     line-height: calc(50 / 30);
     text-align: center;
+    width: 960px;
+    margin-inline: auto;
     
 }
 @media (max-width: 767px) {
     .greeting__title {
+        width: 100%;
         font-size: 1.5625rem; 
         line-height: calc(35 / 25);
         color: #0D96A0;
@@ -201,10 +209,11 @@ fv
         line-height: calc(30 / 16);
     }
 }
+/*--足跡--*/
 .ashiato {
     position: absolute;
     right: 76.24px;
-    bottom: -30px;
+    bottom: 55.88px;
 }
 @media (max-width: 767px) {
     .ashiato {
@@ -222,3 +231,150 @@ fv
         height: 62.94px;
     }
 }
+/* ----------
+強み
+---------- */
+
+.strength {
+    width: 1010px;
+    margin-left: 70px;
+    background-color: rgb(13 150 160 / 10.2%);
+    padding-left: 29px;
+    padding-right: 100px;
+}
+@media (max-width: 767px) {
+    .strength {
+        width: 375px;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.strength__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 42px;
+    gap: 20px;
+    margin-bottom: 102px;
+}
+@media (max-width: 767px) {
+    .strength__heading {
+        margin-bottom: 42px;
+        padding-top: 9px;
+    }
+}
+.strength__heading img {
+    width: 25.49px;
+    height: 25px;
+    transform: translateY( 0);
+}
+
+.strength__title {
+    text-align: center;
+    font-size: 1.5625rem;
+    font-weight: 700;
+    color: #505050;  
+}
+.strength__item {
+    display: flex;
+    gap: 45px;
+}
+@media (max-width: 767px) {
+    .strength__item {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+}
+@media (max-width: 767px) {
+    .strength__item picture {
+        margin-inline: auto;
+    }
+}
+.strength__text {
+    width: 396px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: calc(33 / 18);
+    transform: translateY( -3px);
+    color: #505050;
+} 
+@media (max-width: 767px) {
+    .strength__text {
+        width: 335px;
+        font-size: 1rem;
+        line-height: 30px;
+        margin-inline: auto;
+       
+    }
+}
+.strength__text h3 {
+    margin-bottom: 19px;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+    color: #505050;
+}
+@media (max-width: 767px) {
+    .strength__text h3 {
+        margin-top: 26px;
+        margin-bottom: 6px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: calc(30 / 20);
+        color: #505050;
+    }
+}
+.br-sp {
+    display: none;
+}
+@media (max-width: 767px) {
+    .br-sp {
+        display: inline;
+    }
+}
+.strength__img {
+    width: 440px;
+    height: 247px;
+    transform: translateY( -54px);
+}
+@media (max-width: 767px) {
+    .strength__img{
+       width: 335px;
+       height: 200px;
+       transform: none;
+    }
+}          
+.strength__item--reverse {
+    flex-direction: row-reverse;
+    margin-top: 50px;  
+}
+@media (max-width: 767px) {
+    .strength__item--reverse {
+        flex-direction: column-reverse;
+        margin-top: 36px;
+    }
+}
+.strength__item--third {
+    margin-top: 50px;
+}
+@media (max-width: 767px) {
+    .strength__item--third {
+        margin-top: 42px;
+    }
+}
+.strength__item--reverse .strength__text {
+    transform: translate(3px, -6px);
+}
+@media (max-width: 767px) {
+    .strength__item--reverse .strength__text {
+        transform: none;
+     }   
+   } 
+@media (max-width: 767px) {
+    .strength__item--reverse .strength__text h3 {
+        margin-bottom: 4px;
+    }
+}     
+
