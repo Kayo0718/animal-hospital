@@ -2,11 +2,7 @@ body {
     font-family: "Noto Sans JP", sans-serif;
     color: #505050;
 }
-@media (min-width: 768px) {
-    body {
-        width: 1080px;
-    }
-}
+
 /* ----------
 header
 ---------- */
@@ -26,15 +22,6 @@ header
     height: 50px;
     padding: 0 100px;
 }
-/* ----------
-中間サイズ
----------- */
-@media (min-width: 768px) and (max-width: 1079px) {
-    header {
-        padding: 0 20px;
-    }
-}
-/*----- ここまで　-----*/
 @media (max-width: 767px) {
     header {
         padding: 0 20px;
@@ -54,7 +41,7 @@ header
     font-size: 1.125rem;
     font-weight: 700;
     line-height: calc(33 / 18);
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 @media (max-width: 767px) {
     .header__title {
@@ -73,7 +60,7 @@ header
 }
 .header__nav-list a {
     line-height: 1;
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 .header__nav-list a:hover {
     color: #999999;
@@ -84,7 +71,12 @@ header
         display: none;
     }
 }
-
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    header {
+        padding: 0 20px;
+    }
+}    
 /* ----------
 fv
 ---------- */
@@ -92,7 +84,8 @@ fv
     position: relative;
 }          
 .fv__img {
-    width: 1080px;
+    /* width: 1080px; */
+    width: 100%;
     height: 500px;
 }
 @media (max-width: 767px) {
@@ -144,6 +137,13 @@ fv
 @media (max-width: 767px) {
     .fv__lead {
         font-size: 1.25rem;
+    }
+}
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    .fv__text {
+        width: 400px;
+        padding-left: 40px;
     }
 }
 /* ----------
@@ -205,6 +205,12 @@ fv
         font-size: 1rem;
         line-height: calc(30 / 16);
     }
+}
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    .greeting__title {
+        width: 100%;
+    } 
 }
 /*--足跡--*/
 .ashiato {
@@ -385,7 +391,22 @@ fv
         display: none;
     }
 }
-
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    .strength {
+        margin-left: 0;
+        width: 100%;
+    }   
+    .strength__img {
+         width: 300px; 
+         height: auto; 
+         transform: none;
+    }
+    .strength__item {
+        gap: 30px;
+        justify-content: center;
+    }
+}
 /* ----------
 サービス
 ---------- */
@@ -482,6 +503,20 @@ fv
         padding-top: 50px;
     }
 }
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    .service__items {
+        gap: 30px;
+    }
+    .service__item {
+        width: 220px;
+    }
+    .service__img {
+        width: 220px;
+        height: auto;
+    }
+    
+}    
 /* ----------
 おしらせ
 ---------- */
@@ -610,7 +645,21 @@ fv
        width: 315px;
        line-height: 24px;
     }
-}   
+} 
+/*---中間サイズ---*/ 
+@media (min-width: 768px) and (max-width: 1079px) {
+    .notice {
+        width: 100%; 
+    }
+    .notice ul {
+        margin-left: auto;
+        width: calc(100% - 40px);
+    }
+    .notice li::after {
+        width: 100%;
+        left: 0;
+    }   
+}
 /* ----------
 アクセス
 ---------- */
@@ -624,8 +673,7 @@ fv
 }
 @media (max-width: 767px) {
     .access__heading {
-        padding-top: 29px;
-        
+        padding-top: 29px; 
     }
 }
 .access__heading h2  {
@@ -649,6 +697,7 @@ fv
     width: 440px;
     height: 300px;
     margin-left: 100px;
+    margin-bottom: 70px;
 }
 @media (max-width: 767px){
     .access__img {
@@ -657,6 +706,8 @@ fv
         margin-left: 0;
         margin-inline: auto;
         display: block;
+        margin-bottom: 30px;
+       
     }
 }
  @media (max-width: 767px){
@@ -750,7 +801,7 @@ fv
     column-gap: 6px;
     padding-left: 2px;
     padding-top: 23px;
-    padding-bottom: 18px; 
+    margin-bottom: 50px;
 }
 @media (max-width: 767px) {
     .access dl {
@@ -768,4 +819,168 @@ fv
 }
 .access dd:last-of-type {
     margin-left: -15px;
+}
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    .access__img {
+        margin-left: 20px;
+        width: 300px;
+    }
+    .access__contents {
+        justify-content: center;
+    }
+}
+/* ----------
+お問い合わせ
+ ---------- */
+ .contact {
+    padding-top: 128px;
+    background-color: rgb(13 150 160 / 10.2%);
+}
+.contact__form { 
+    display: flex;
+    flex-direction: column;
+}   
+.contact__heading img {
+    width: 25.49px;
+    height: 25px; 
+}
+ .contact__heading {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+ }
+.contact__title {
+    font-size: 1.5625rem;
+    font-weight: 700;
+}
+.contact__text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-inline: auto;
+    width: 515px;
+    height: 60px;
+    text-align: center;
+}
+#name {
+    /* width: 711px; */
+    width: 500px;
+    height: 40px;
+    border: 1px solid rgb(13 150 160 / 10.2%);
+    background-color: #ffff;
+    margin-top: -5px;
+}
+.contact__name-row {
+    display: flex;
+    gap: 109px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.contact__name-row label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: calc(33 / 20); 
+}
+#email {
+    /* width: 711px; */
+    width: 500px;
+    height: 40px;
+    border: 1px solid rgb(13 150 160 / 10.2%);
+    background-color: #ffff;
+    margin-top: -5px;
+}
+.contact__email-row {
+    display: flex;
+    gap: 29px;
+    margin-top: 36px;
+    margin-left: 100px;
+
+}
+.contact__email-row label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: calc(33 / 20);
+}
+#message {
+    /* width: 711px; */
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgb(13 150 160 / 10.2%);
+    background-color: #ffff;
+}
+.contact__message-row label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: calc(33 / 20);  
+}
+.contact__message-row {
+    display: flex;
+    gap: 109px;
+    margin-top: 32px;
+    margin-left: 100px;
+}
+.contact__submit {
+    width: 200px;
+    height: 50px;
+    background-color: #0D96A0;
+    color: #ffff;
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: calc(33 / 25);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    transition: 0.5s;
+}
+.contact__submit:hover {
+    background-color: #ffff;
+    color: #0D96A0;
+
+}
+/*---中間サイズ---*/
+@media (min-width: 768px) and (max-width: 1079px) {
+    .contact {
+        width: 100%;
+    }
+    .contact__name-row {
+        gap: 30px;
+        margin-left: 80px;
+    }
+    .contact__email-row label {
+        white-space: nowrap;
+        width: 170px;
+        flex-shrink: 0;
+        gap: 30px;
+    }
+    .contact__email-row {
+        gap: 30px;
+        margin-left: 80px;
+    }
+    .contact__message-row {
+        gap: 30px;
+        margin-left: 80px;
+    }
+    .contact__message-row label {
+        width: 170px;
+        flex-shrink: 0;
+    }
+    .contact__name-row label {
+        width: 170px;
+        flex-shrink: 0;
+    }
+    #name {
+        width: 450px;
+    }
+    #email {
+        width: 450px;
+    }
+    #message {
+        width: 450px;
+    }
 }
