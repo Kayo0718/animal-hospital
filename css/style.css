@@ -84,7 +84,6 @@ fv
     position: relative;
 }          
 .fv__img {
-    /* width: 1080px; */
     width: 100%;
     height: 500px;
 }
@@ -249,7 +248,7 @@ fv
 @media (max-width: 767px) {
     .strength {
         width: 375px;
-        margin-left: 0;
+        margin-inline: auto;
         padding-left: 0;
         padding-right: 0;
         margin-top: 3px;
@@ -427,7 +426,7 @@ fv
 }
 @media (max-width: 767px) {
     .service__heading {
-        transform: translateY(8px);
+        transform: translateX(3px) translateY(7px);
     }
 }
 .service__heading {
@@ -656,10 +655,10 @@ fv
 /*---中間サイズ---*/ 
 @media (min-width: 768px) and (max-width: 1079px) {
     .notice {
-        width: 100; 
+        width: 100%; 
     }
     .notice ul {
-        margin-left: auto;
+        margin-inline: auto;
         width: calc(100% - 40px);
     }
     .notice li::after {
@@ -700,6 +699,7 @@ fv
     .access__contents {
         flex-direction: column;
         gap: 0;
+        align-items: center;
     }
 }
 .access__img {
@@ -720,7 +720,7 @@ fv
 }
  @media (max-width: 767px){
     .access__info {
-        margin-left: 20px;
+        margin-left: -2px;
     }
  }
 .access__name {
@@ -765,8 +765,9 @@ fv
 @media (max-width: 767px) {
     .access__tel {
         color: #0D96A0;
-        left: 3px;
+        left: 2px;
         position: relative;
+        top: -1px;
     }
 }
 .access__tel-row {
@@ -824,6 +825,8 @@ fv
         width: 335px;
         padding-top: 16px; 
         padding-bottom: 14px;
+        position: relative;
+        top: -1px;
     }
 }
 .access dd {
@@ -888,7 +891,7 @@ fv
         font-size: 1rem;
         line-height: 30px;
         font-weight: 500;
-        margin-top: 43px;
+        margin-top: 42px;
         text-align: left;
     }
 }
@@ -1035,7 +1038,7 @@ fv
         height: 41px;
         margin-top: 51px;
         font-size: 1.25rem;
-        transform: translateY(-1px);
+        transform: translateY(0.5px);
         background-color: #0D96A0;
         color: #ffff;
     }
@@ -1120,7 +1123,7 @@ footer {
 }
 @media (max-width: 767px) {
     footer {
-        padding-top: 15px;
+        padding-top: 17px;
     }
 }
 .footer__copyright {
