@@ -940,7 +940,7 @@ fv
     height: 40px;
     border: 1px solid rgb(13 150 160 / 10.2%);
     background-color: #ffff;
-    margin-top: -5px;
+    margin-top: -9px;
 }
 @media (max-width: 767px) {
     #email {
@@ -968,6 +968,7 @@ fv
     font-size: 1.25rem;
     font-weight: 700;
     line-height: calc(33 / 20);
+    margin-top: -1px;
 }
 @media (max-width: 767px) {
     .contact__email-row label {
@@ -992,7 +993,8 @@ fv
 .contact__message-row label {
     font-size: 1.25rem;
     font-weight: 700;
-    line-height: calc(33 / 20);  
+    line-height: calc(33 / 20);
+    margin-top: 3px;  
 }
 @media (max-width: 767px) {
     .contact__message-row label {
@@ -1026,7 +1028,7 @@ fv
     line-height: calc(33 / 25);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 45px;
+    margin-top: 48px;
     text-align: center;
     border-radius: 10px;
     margin-bottom: 80px;
